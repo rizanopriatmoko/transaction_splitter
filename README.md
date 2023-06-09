@@ -1,6 +1,6 @@
 # README
 
-A Simple web app to create a transaction by using ruby on rails
+A Simple MVC web app to create a transaction by using ruby on rails
 
 * Ruby 2.6.3
 
