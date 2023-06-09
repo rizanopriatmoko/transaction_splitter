@@ -1,0 +1,8 @@
+.container
+  %ol.breadcrumb
+    %li.breadcrumb-item
+      %a{:href => "/admin/partners"} Direct Transaction
+    %li.breadcrumb-item.active New Quotation
+  = simple_form_for(@batch_trx, url: admin_batch_direct_transactions_path, method: :post) do |f|
+    = render 'form', f: f
+    

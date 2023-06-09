@@ -1,0 +1,22 @@
+= f.error_notification
+= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+.form-group.form-group-default.required
+  = f.input :reference_id, input_html: {class: "form-control"}
+.form-group.form-group-default.required
+  = f.input :transaction_type, collection: ["B2B", "B2C"], input_html: {class: "form-control select2"}
+.form-group.form-group-default.required
+  = f.input :currency, collection: ['THB'], input_html: {class: "form-control select2"}
+.form-group.form-group-default.required
+  = f.input :amount, input_html: {class: "form-control"}
+.form-group.form-group-default.required
+  = f.input :amount_limit_per_trx, input_html: {class: "form-control"}
+.form-group.form-group-default.required
+  = f.input :bank_id, input_html: {class: "form-control"}
+
+.row
+  .col-md-6
+    .form-actions
+      = link_to "Back", admin_batch_direct_transactions_path, class: "btn btn-warning"
+  .col-md-6
+    .form-actions.text-right
+      = f.button :submit, class: "btn btn-complete"

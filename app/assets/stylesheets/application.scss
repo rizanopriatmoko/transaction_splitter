@@ -1,0 +1,147 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800,900&display=swap');
+
+ body {
+   margin: 0px;
+ }
+ 
+ body, table.body, h1, h2, h3, h4, h5, h6, p, td, a{
+   font-family: 'Montserrat', sans-serif;
+ }
+ 
+ .main-menu {
+   background: image-url("front/bg-main.png");
+   background-size: cover;
+   width: 100%;
+   height: 100vh;
+   padding: 45px;
+ }
+ 
+ .title-section {
+   padding: 10vh 0vh 0vh;
+ }
+ 
+ .title-section h1, h2, h3, h4, h5, h6 {
+   font-weight: bold;
+ }
+ 
+ 
+ .title-section h2 {
+   color: #fff;
+ }
+ 
+ .title-section h3 {
+   color: #FFD27C;
+ }
+ 
+ .description-sec {
+   padding: 20px 0px;
+ }
+ 
+ .btn-orange {
+   font-family: 'Montserrat' !important;
+   font-weight: 600;
+   background-color: #FFD27C;
+   border-color: #FFD27C;
+   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+   border-radius: 2px;
+   color: #464A4F !important;
+   padding: 10px 80px;
+ }
+ 
+ .btn-orange a {
+   color: #464A4F !important;
+ }
+ 
+ .btn-orange:hover {
+   color: #464A4F !important;
+   background-color: #FFD54F;
+   border-color: #FFD54F;
+ }
+ 
+ .btn-orange:focus, .btn-orange.focus {
+   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+ }
+ 
+ .download-sec {
+   padding: 50px 0px;
+ }
+ 
+ .details-sec {
+   background-color: #EEF9FE;
+   padding: 45px 0px;
+ }
+ 
+ .subdetail {
+   text-align: center;
+   padding: 40px 0px;
+ }
+ 
+ .details-sec .image-sec {
+   height: 85px;
+ }
+ 
+ .info-sec {
+   background-color: #3D4141;
+   padding: 45px 0px;
+   text-align: center;
+ }
+ 
+ .info-sec h6 {
+   color: #FFD27C;
+ }
+ 
+ .info-sec p {
+   color: #FFFFFE;
+ }
+ 
+ .info-form {
+   padding: 20px 0px;
+ }
+ 
+ .info-form .btn-orange {
+   font-family: 'Montserrat' !important;
+   font-weight: 600;
+   background-color: #FFD27C;
+   border-color: #FFD27C;
+   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+   border-radius: 2px;
+   color: #464A4F !important;
+   padding: 6px 50px;
+ }
+ 
+ .info-form .form-control {
+   background-color: #3D4141;
+   border: 1px solid white;
+   color: white;
+   padding: 6px 100px 6px 10px;
+   font-family: 'Montserrat';
+ }
+ 
+ .footer-sec {
+   padding: 45px 0px;
+   background-color: #fff;
+ }
+ 
+ .address-sec {
+   padding: 30px 0px 0px;
+ }
+ 
+ .alert {
+   margin-bottom: 0;
+ }

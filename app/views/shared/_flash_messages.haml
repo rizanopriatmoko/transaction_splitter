@@ -1,0 +1,13 @@
+- if notice
+  .alert.bg-success
+    .container
+      = notice
+- if flash[:success]
+  .alert.bg-success
+    .container
+      = flash[:success]
+- if flash[:alert]
+  .alert.bg-danger
+    .container
+      = flash[:alert]
+   

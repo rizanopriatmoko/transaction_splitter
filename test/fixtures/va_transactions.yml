@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  va_number_id: MyString
+  amount: 9.99
+  success: false
+  tx_date: 2021-09-10 15:46:27
+  trx_expiration_date: 2021-09-10 15:46:27
+  trx_id: MyString
+  settlement_time: 2021-09-10 15:46:27
+  settlement_status: MyString
+
+two:
+  va_number_id: MyString
+  amount: 9.99
+  success: false
+  tx_date: 2021-09-10 15:46:27
+  trx_expiration_date: 2021-09-10 15:46:27
+  trx_id: MyString
+  settlement_time: 2021-09-10 15:46:27
+  settlement_status: MyString

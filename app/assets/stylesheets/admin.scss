@@ -1,0 +1,324 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require pace/pace-theme-flash
+ *= require bootstrap/css/bootstrap.min
+ *= require font-awesome
+ *= require jquery-scrollbar/jquery.scrollbar
+ *= require select2/css/select2.min
+ *= require switchery/css/switchery.min
+ *= require pages-icons
+ *= require alerts/sweet-alert
+ *= require bootstrap-datepicker/css/datepicker
+ *= require bootstrap-daterangepicker/daterangepicker-bs3
+ *= require bootstrap-tag/bootstrap-tagsinput
+ *= require bootstrap-timepicker/bootstrap-timepicker
+ *= require bootstrap3-wysihtml5/bootstrap3-wysihtml5.min
+ *= require codrops-dialogFx/dialog
+ *= require codrops-stepsform/css/component
+ *= require dropzone/css/dropzone
+ *= require ion-slider/css/ion.rangeSlider
+ *= require noui-slider/jquery.nouislider
+ *= require nvd3/nv.d3.min
+ *= require owl-carousel/assets/owl.carousel
+ *= require responsive-tabs/responsive-tabs
+ *= require rickshaw/rickshaw
+ *= require simple-line-icons/simple-line-icons
+ *= require summernote/css/summernote
+ *= require tether/css/tether.min
+ *= require animate.min
+ *= require bootstrap-datepicker/css/datepicker3
+ *= require bootstrap-timepicker/bootstrap-timepicker
+
+ *= require themes/corporate
+ *= require pages.css
+ *= require fullcalendar
+ *= require_self
+ */
+
+ .select2-container .select2-selection {
+    border: unset !important;
+  }
+  
+  @font-face {
+    font-family: 'Gotham Rounded Book';
+    src: font-url("GothamRounded-Book.woff2") format("woff2"), font-url("GothamRounded-Book.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Gotham Rounded';
+    src: font-url("GothamRounded-Bold.woff2") format("woff2"), url("GothamRounded-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  .drop-padding {
+    padding: 5rem;
+    text-align: center;
+  }
+  
+  .sender.form-group-default.input-group label {
+    margin-top: 6px;
+    padding-left: 12px;  
+    padding-right: 10px;
+  }
+  
+  .sender .input-group-append {
+    background: #3ea71b;
+  }
+  
+  .sender .select2-container .select2-selection.select2-selection--single {
+    background: #3ea71b;
+    height: 35px;
+  }
+  
+  .vertical-line-icon {
+    display: table;
+    padding-top: 5px;
+    height: 35px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .vertical-line-icon:after {
+    content: '';
+    display: table;
+    margin: 0 auto;
+    width: 1px;
+    height: 100%;
+    background-color: #97979778;
+  }
+  
+  .text-green {
+    color: #3ea71b !important;
+  }
+  
+  .icon-thumbnail {
+    margin-left: 30px;
+    left: 0;
+    float: left;
+    margin-right: 0px;  
+  }
+  
+  .bg-gradient {
+    background: #3ea71b;
+    background-size: cover;
+  }
+  
+  .menu-items li {
+    line-height: 50px;
+  }
+  
+  .sub-menu li {
+    line-height: 25px; 
+  }
+  
+  .page-sidebar .sidebar-menu .menu-items > li > a {
+    padding-left: 2px;
+    color: #fff;
+  }
+  
+  .table thead tr th {
+    background-color: #fff;
+    color: #3ea71b !important;
+  }
+  
+  .table {
+    margin-top: 30px;
+  }
+  
+  .table-center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  .label-tosca {
+    background-color: #3ea71b;
+    color: #fff;
+  }
+  
+  .bg-tosca {
+    background-color: #3ea71b;  
+  }
+  
+  hr {
+    border-color: #dadada;
+  }
+  
+  input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: #aaa;
+    margin-right: 0.5em;
+  }
+  input[type="date"]:focus:before,
+  input[type="date"]:valid:before {
+    content: "";
+  }
+  
+  .selecting-form .select2-container {
+    display: unset;
+  }
+  
+  .selecting-form .select2-container .select2-selection.select2-selection--single {
+    background: transparent;
+  }
+  
+  .text_field_transaction {
+    width: 100%;
+  }
+  
+  .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #3ea71b;
+    border-color: #3ea71b;
+  }
+  
+  .page-link {
+    color: #3ea71b;
+  }
+  
+  .loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+  }
+  
+  .alert {
+    color: white !important;
+  }
+
+  .btn {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .fa-check-circle {
+    font-size: 18px;
+  }
+  
+  .badge-waiting_for_payment {
+    background-color: #3ea71b;
+  }
+  
+  .badge-on_progress, .badge-waiting_for_approval, .badge-resetted{
+    background-color: #edf852;
+  }
+  
+  .badge-completed, .badge-approved, .badge-regenerated{
+    background-color: #52f884;
+  }
+  
+  .badge-canceled, .badge-rejected{
+    background-color: #f85268;
+    color: white;
+  }
+
+  .badge-main{
+    background-color: #3ea71b;
+    color: white;
+  }
+
+  #myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 60px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  .modal-backdrop {
+    position: relative;
+}
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: relative;
+    top: 65px;
+    right: 30px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index:100000;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1.5
+  date: 2020-04-22
+  state: MyString
+  partner_id: 1
+  approved_by_id: 1
+  balance_id: 1
+
+two:
+  amount: 1.5
+  date: 2020-04-22
+  state: MyString
+  partner_id: 1
+  approved_by_id: 1
+  balance_id: 1

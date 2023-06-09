@@ -1,0 +1,9 @@
+slowgroup:
+  classes: ConfirmationsWorker
+  workers: 1
+fastgroup:
+  classes: WebhooksWorker
+  workers: 1
+regengroup:
+  classes: RegenerationsWorker
+  workers: 1

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  purpose_of_remittance: MyString
+  source_of_funds: MyString
+  beneficiary_relationship: MyString
+
+two:
+  purpose_of_remittance: MyString
+  source_of_funds: MyString
+  beneficiary_relationship: MyString

@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Company
+    = csrf_meta_tags
+    = csp_meta_tag
+    %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}/
+    %meta{:content => "yes", :name => "apple-touch-fullscreen"}/
+    %meta{:content => "default", :name => "apple-mobile-web-app-status-bar-style"}/
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body{style:"margin:0px;"}
+    = render "shared/flash_messages"
+    = yield

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  partner: one
+  balance: one
+  last_bh_id: 1
+  last_update: 2023-02-21 14:24:39
+
+two:
+  partner: two
+  balance: two
+  last_bh_id: 1
+  last_update: 2023-02-21 14:24:39

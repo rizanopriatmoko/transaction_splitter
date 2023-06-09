@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reference_id: MyString
+  transaction_type: MyString
+  currency: MyString
+  amount: 1.5
+  amount_limit_per_trx: 1.5
+  bank_account_number: MyString
+  bank_id: 1
+  sender: MyText
+  recipient: MyText
+
+two:
+  reference_id: MyString
+  transaction_type: MyString
+  currency: MyString
+  amount: 1.5
+  amount_limit_per_trx: 1.5
+  bank_account_number: MyString
+  bank_id: 1
+  sender: MyText
+  recipient: MyText

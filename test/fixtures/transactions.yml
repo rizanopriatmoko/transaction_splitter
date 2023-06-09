@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reference_id: 1
+  callback_url: MyString
+  payer_id: 1
+  mode: MyString
+  source: 
+  destination: 
+  beneficiary: 
+  compliance: 
+
+two:
+  reference_id: 1
+  callback_url: MyString
+  payer_id: 1
+  mode: MyString
+  source: 
+  destination: 
+  beneficiary: 
+  compliance: 

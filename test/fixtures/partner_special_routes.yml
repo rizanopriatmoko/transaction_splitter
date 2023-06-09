@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  partner: one
+  payer: one
+  best_route: MyString
+
+two:
+  partner: two
+  payer: two
+  best_route: MyString

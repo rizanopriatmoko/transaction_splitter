@@ -1,0 +1,32 @@
+.container
+  %ol.breadcrumb
+    %li.breadcrumb-item
+      %a{:href => "/"} Admin
+    %li.breadcrumb-item.active Business Trasaction
+  .panel-body
+    .col-md-6 
+      .panel-body
+        %h2 QUOTATION RESPONSE
+        %pre.json
+          %code
+            =(@single.quotation_response)
+    .col-md-6 
+      .panel-body
+        %h2 TRANSACTION RESPONSE
+        %pre.json
+          %code
+            =(@single.confirmation_response)
+    -# %pre.json
+    -#   %code
+    -#     =JSON.pretty_generate(@single.quotation_response)    
+  -# = simple_form_for(:business_transactions, url: create_quotation_admin_business_transactions_path, method: :post, remote: true) do |f|
+  -#   = f.error_notification
+  -#   .form-group.form-group-default.required
+  -#     .col-md-6
+  -#       = f.text_area :quotation, :cols => 60, :rows => 50
+  -#     -if @submitted
+  -#       .col-md-6 
+  -#       =@quotation
+
+    
+

@@ -1,0 +1,22 @@
+.header
+  %a.btn-link.toggle-sidebar.d-lg-none.pg.pg-menu{"data-toggle" => "sidebar", :href => "#"}
+  %div
+    .brand.inline
+      -# %img{:alt => "logo", "data-src" => "assets/images/icons/logo-rocket.png", "data-src-retina" => "assets/images/icons/logo-rocket.png", :height => "22", :src => "assets/images/icons/logo-rocket.png", :width => "78"}/
+    
+  .d-flex.align-items-center
+    / START User Info
+    .role-sec
+      %span.label.label-tosca
+        Admin
+    .vertical-line-icon
+    -# .dropdown.pull-right.d-lg-block.d-none
+    -#   %button.profile-dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+    -#     %span.thumbnail-wrapper.d32.circular.inline
+    -#       = image_tag "icons/icon-user.png", width: 35
+  -# .d-flex.align-items-center
+  -#   / START User Info
+  -#   .pull-left.p-r-10.fs-14.font-heading.d-lg-block.d-none
+  -#     -# %span.semi-bold David
+  -#     -# %span.text-master Nest
+  -#     = link_to "Sign out", destroy_user_session_path, :method => :delete

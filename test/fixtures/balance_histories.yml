@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  credit: 1
+  debit: 1
+  balance_id: 1
+  originator: 
+  notes: MyText
+  description: MyText
+
+two:
+  credit: 1
+  debit: 1
+  balance_id: 1
+  originator: 
+  notes: MyText
+  description: MyText

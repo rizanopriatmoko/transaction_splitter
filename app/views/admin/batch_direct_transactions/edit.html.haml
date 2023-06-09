@@ -1,0 +1,42 @@
+.container
+  %ol.breadcrumb
+    %li.breadcrumb-item
+      %a{:href => "/"} Admin
+    %li.breadcrumb-item.active
+      %a{:href => "/admin/partners"} Partners
+    %li.breadcrumb-item.active
+      %a{:href => "/admin/partners/#{params[:id]}"}= params[:id]
+    %li.breadcrumb-item.active Edit
+  %br
+  = simple_form_for(@batch_trx, url: admin_batch_direct_transaction_path(@trx.id), method: :put) do |f|
+    = f.error_notification
+    .form-group.form-group-default.required
+      = f.input :document_reference_number, input_html: {class: "form-control"}
+    %h2.bold Sender
+    = f.fields_for :sender, OpenStruct.new(f.object.recipient || {}) do |f2|
+      .form-group.form-group-default.required
+        = f2.input :registered_name, input_html: {class: "form-control"}
+      .form-group.form-group-default.required
+        = f2.input :address, input_html: {class: "form-control"}
+      .form-group.form-group-default.required
+        = f2.input :registration_number, input_html: {class: "form-control"}
+    %br
+    %h2.bold Recipient
+    - if @batch_trx.transaction_type == 'B2B'
+      = f.fields_for :recipient, OpenStruct.new(f.object.recipient || {}) do |f2|
+        .form-group.form-group-default.required
+          = f2.input :registered_name, input_html: {class: "form-control"}
+    - else
+      = f.fields_for :recipient, OpenStruct.new(f.object.recipient || {}) do |f2|
+        .form-group.form-group-default.required
+          = f2.input :firstname, input_html: {class: "form-control"}
+        .form-group.form-group-default.required  
+          = f2.input :lastname, input_html: {class: "form-control"}
+    .form-group.form-group-default.required
+      = f.input :bank_account_number, input_html: {class: "form-control"}
+    .row
+      .col-md-6
+        .form-actions
+          = f.button :submit, "Create Payment", class: "btn btn-complete"
+
+  

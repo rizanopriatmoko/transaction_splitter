@@ -1,0 +1,124 @@
+.container
+  %ol.breadcrumb
+    %li.breadcrumb-item
+      %a{:href => "/"} Admin
+    %li.breadcrumb-item
+      %a{:href => "/admin/batch_direct_transactions"} Partner 1 Batch Transactions
+  %h2.bold= "#{@trx.reference_id}"
+  %br
+  .card.card-default
+    .card-body
+      .row
+        .col-md-4
+          %span Sender Name
+          - if @trx&.sender['registered_name'].present?
+            .h7.bold.text-green= @trx&.sender['registered_name']
+          - else
+            .h7 -
+          %br
+          %span Sender Address
+          - if @trx&.sender['address'].present?
+            .h7.bold.text-green= @trx&.sender['address']
+          - else
+            .h7 -
+          %br
+          %span Sender Registration Number
+          - if @trx&.sender['registration_number'].present?
+            .h7.bold.text-green= @trx&.sender['registration_number']
+          - else
+            .h7 -
+          %br
+        .col-md-4
+          %span Recipient Name
+          - if @trx&.bene_name.present?
+            .h7.bold.text-green= @trx&.bene_name
+          - else
+            .h7 -
+          %br
+          %span Recipient Bank Account Number
+          - if @trx&.bank_account_number.present? 
+            .h7.bold.text-green= @trx&.bank_account_number
+          - else
+            .h7 -
+          %br
+          %span Recipient Bank
+          - if @trx&.bank_id&.present? 
+            .h7.bold.text-green= @trx&.bank_id
+          - else
+            .h7 -
+          %br
+          %span Recipient Currency
+          - if @trx&.currency&.present? 
+            .h7.bold.text-green= @trx&.currency
+          - else
+            .h7 -
+          %br 
+        .col-md-4
+          %span Purpose of Remittance
+          - if @trx&.purpose_of_remittance.present?
+            .h7.bold.text-green= @trx&.purpose_of_remittance
+          - else
+            .h7 -
+          %br
+          %span Expiration
+          - if @trx&.expiration_date.present?
+            .h7.bold.text-green= @trx&.expiration_date
+          - else
+            .h7 -
+          %br
+          %span Document Reference Number
+          - if @trx&.document_reference_number&.present? 
+            .h7.bold.text-green= @trx&.document_reference_number
+          - else
+            .h7 -
+          %br
+  %br
+  -if @trx.state == "created" && @trx.single_transaction_length == @trx.single_direct_transactions.length
+    .text-left 
+      = link_to 'Create Transaction', edit_admin_batch_direct_transaction_path(@trx.id), class: "btn btn-complete"
+  %br
+  -if @single_trx.present?
+    .card.card-default
+      .card-body
+        %h4 Single Transactions
+        .table-responsive
+          %table.table
+            %colgroup
+              %col{:style => "width: 20%"}/
+              %col{:style => "width: 20%"}/
+              %col{:style => "width: 20%"}/
+              %col{:style => "width: 20%"}/
+              %col{:style => "width: 20%"}/
+              %thead
+                %tr
+                  %th Single Reference ID
+                  %th Amount
+                  %th Created At
+                  %th State
+                  %th Responses
+            %tbody
+              - @single_trx.each do |trx|
+                %tr
+                  %td= trx&.single_reference_id
+                  %td= trx&.amount
+                  %td= trx&.created_at 
+                  %td= trx&.state
+                  %td
+                    .d-flex
+                      .p-2
+                        = link_to response_admin_batch_direct_transaction_path(trx.id) do
+                          %i.fa.fa-arrow-right{"data-original-title" => "View Transactions", "data-toggle" => "tooltip"}
+                      -if trx.state == "rejected"
+                        .p-2
+                          = link_to regenerate_admin_batch_direct_transaction_path(trx.id), method: :put, data: { confirm: 'Are you sure?' } do
+                            %i.fa.fa-usd{"data-original-title" => "Regenerate Payment", "data-toggle" => "tooltip"}
+  %br
+  .row
+    .col-md-12
+      = will_paginate @single_trx
+  %br
+          
+
+
+
+  

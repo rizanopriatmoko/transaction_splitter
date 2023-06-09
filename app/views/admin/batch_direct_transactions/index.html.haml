@@ -1,0 +1,67 @@
+.container
+  %ol.breadcrumb
+    %li.breadcrumb-item
+      %a{:href => "/"} Transaction
+    %li.breadcrumb-item.active Direct Transaction
+  %hr/
+  = search_form_for @q, url: admin_batch_direct_transactions_path do |f|
+    .row
+      .col-md-3.col-12
+        .form-input-group
+          = f.text_field :reference_id_cont, class: "form-control", placeholder: "Search Reference ID"
+    %br/
+    .row
+      .col-12.text-center 
+        = f.submit "Search", class: "btn btn-complete"
+  %hr/
+  .text-right 
+    = link_to 'Create Quotation', new_admin_batch_direct_transaction_path, class: "btn btn-complete"
+  %br
+  .table-responsive
+    %table.table
+      %colgroup
+        %col{:style => "width: 15%"}/
+        %col{:style => "width: 15%"}/
+        %col{:style => "width: 20%"}/
+        %col{:style => "width: 20%"}/
+        %col{:style => "width: 10%"}/
+        %col{:style => "width: 10%"}/
+        %col{:style => "width: 10%"}/
+      %thead
+        %tr
+          %th Id
+          %th Reference ID
+          %th.text-center Transaction Type
+          %th.text-center Currency
+          %th.text-center Amount
+          %th.text-center Bank Account Number
+          %th.text-center Sender
+          %th.text-center Recipient
+          %th.text-center State
+          %th.text-center Action
+      %tbody
+        - @batch_trx.each do |trx|
+          %tr
+            %td= trx.id
+            %td= trx.reference_id
+            %td.text-center= trx&.transaction_type
+            %td.text-center= trx&.currency
+            %td.text-center= trx&.amount
+            %td.text-center= trx&.bank_account_number || "-"
+            %td.text-center= trx&.sender_name || "-"
+            %td.text-center= trx&.bene_name || '-'
+            %td.text-center= trx&.state || "-"
+            %td
+              .d-flex
+                -if trx.state == "created"
+                  .p-2
+                    = link_to edit_admin_batch_direct_transaction_path(trx.id) do
+                      %i.fa.fa-usd{"data-original-title" => "Create Payment", "data-toggle" => "tooltip"}
+                .p-2
+                  = link_to admin_batch_direct_transaction_path(trx.id) do
+                    %i.fa.fa-arrow-right{"data-original-title" => "View Transactions", "data-toggle" => "tooltip"}
+  %br
+  .row
+    .col-md-12
+      = will_paginate @batch_trx
+  %br
